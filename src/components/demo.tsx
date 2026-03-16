@@ -35,8 +35,8 @@ export default function DemoOne() {
                     left: "50%",
                     transform: "translate(-50%, -50%)",
                     fontFamily: "'Great Vibes', cursive",
-                    backgroundImage: "linear-gradient(to right, #B0B0B0 0%, #FFFFFF 50%, #B0B0B0 100%)",
-                    filter: "drop-shadow(0px 2px 12px rgba(255,255,255,0.28))"
+                    color: "#FFFFFF",
+                    textShadow: "0 4px 20px rgba(0,0,0,0.5)"
                 }}
             >
                 My Works
