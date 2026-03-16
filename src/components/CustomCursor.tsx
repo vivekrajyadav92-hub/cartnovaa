@@ -47,16 +47,30 @@ export default function CustomCursor() {
 
         const onMouseOver = (e: MouseEvent) => {
             const target = e.target as HTMLElement;
-            if (target.closest('a, button, input, .interactable')) {
-                gsap.to(cursor, { scale: 1.5, opacity: 0.5, duration: 0.3 });
+            const interactable = target.closest('a, button, input, .interactable');
+            if (interactable) {
+                gsap.to(cursor, { 
+                    scale: 2.5, 
+                    backgroundColor: "rgba(255, 255, 255, 0.1)",
+                    borderColor: "rgba(255, 255, 255, 0.2)",
+                    duration: 0.5,
+                    ease: "power3.out"
+                });
                 gsap.to(cursorDot, { scale: 0, duration: 0.3 });
             }
         };
 
         const onMouseOut = (e: MouseEvent) => {
             const target = e.target as HTMLElement;
-            if (target.closest('a, button, input, .interactable')) {
-                gsap.to(cursor, { scale: 1, opacity: 1, duration: 0.3 });
+            const interactable = target.closest('a, button, input, .interactable');
+            if (interactable) {
+                gsap.to(cursor, { 
+                    scale: 1, 
+                    backgroundColor: "transparent",
+                    borderColor: "rgba(255, 255, 255, 0.5)",
+                    duration: 0.5,
+                    ease: "power3.out" 
+                });
                 gsap.to(cursorDot, { scale: 1, duration: 0.3 });
             }
         };
@@ -79,7 +93,7 @@ export default function CustomCursor() {
         <>
             <div
                 ref={cursorRef}
-                className="fixed top-0 left-0 w-8 h-8 border border-white/50 rounded-full pointer-events-none z-[9999] -ml-4 -mt-4 mix-blend-difference"
+                className="fixed top-0 left-0 w-10 h-10 border border-white/30 rounded-full pointer-events-none z-[9999] -ml-5 -mt-5 mix-blend-difference transition-colors duration-500"
             ></div>
             <div
                 ref={cursorDotRef}

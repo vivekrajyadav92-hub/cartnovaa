@@ -89,22 +89,25 @@ export default function FeaturedProjects() {
             <div ref={projectsRef} className="flex flex-col gap-16 md:gap-32">
                 {projects.map((project, index) => (
                     <div key={project.id} className={`flex flex-col ${index % 2 !== 0 ? 'md:flex-col-reverse lg:flex-row-reverse' : 'lg:flex-row'} gap-8 lg:gap-16 items-center group interactable cursor-pointer`}>
-                        <div className="w-full lg:w-3/5 overflow-hidden rounded-xl">
+                        <div className="w-full lg:w-3/5 overflow-hidden rounded-xl bg-gray-900 border border-white/5">
                             <img
                                 src={project.image}
                                 alt={project.title}
-                                className="w-full h-[400px] md:h-[600px] object-cover transition-transform duration-700 group-hover:scale-105 filter grayscale hover:grayscale-0"
+                                className="w-full h-[400px] md:h-[600px] object-cover transition-all duration-1000 group-hover:scale-110 filter grayscale group-hover:grayscale-0 opacity-80 group-hover:opacity-100"
                             />
                         </div>
                         <div className="w-full lg:w-2/5 flex flex-col justify-center">
-                            <div className="flex justify-between items-center mb-6">
-                                <span className="text-gray-400 tracking-wider text-sm">{project.category}</span>
-                                <span className="text-gray-500 font-serif italic">{project.year}</span>
+                            <div className="flex justify-between items-center mb-6 overflow-hidden">
+                                <span className="text-gray-400 tracking-[0.2em] uppercase text-[10px] font-bold transform translate-y-full group-hover:translate-y-0 transition-transform duration-500">{project.category}</span>
+                                <span className="text-gray-500 font-serif italic transform translate-y-full group-hover:translate-y-0 transition-transform duration-500 delay-100">{project.year}</span>
                             </div>
-                            <h3 className="text-4xl md:text-5xl font-bold mb-6 group-hover:text-gray-300 transition-colors">{project.title}</h3>
-                            <button className="w-12 h-12 rounded-full border border-gray-600 flex items-center justify-center group-hover:bg-white group-hover:text-black transition-all">
-                                <ArrowUpRight className="w-6 h-6" />
-                            </button>
+                            <h3 className="text-4xl md:text-5xl font-bold mb-6 group-hover:text-gray-300 transition-colors tracking-tighter">{project.title}</h3>
+                            <div className="flex items-center gap-4">
+                                <button className="w-12 h-12 rounded-full border border-gray-600 flex items-center justify-center group-hover:bg-white group-hover:text-black transition-all group-hover:border-white">
+                                    <ArrowUpRight className="w-6 h-6" />
+                                </button>
+                                <span className="text-xs uppercase tracking-widest opacity-0 group-hover:opacity-100 transition-opacity duration-500 font-semibold">View Case Study</span>
+                            </div>
                         </div>
                     </div>
                 ))}

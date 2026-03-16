@@ -1,4 +1,4 @@
-import { useEffect, useRef } from 'react';
+import React, { useEffect, useRef } from 'react';
 import gsap from 'gsap';
 import ScrollTrigger from 'gsap/ScrollTrigger';
 import { Award, Hexagon } from 'lucide-react';
@@ -67,6 +67,15 @@ export default function Qualifications() {
         return () => ctx.revert();
     }, []);
 
+    const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
+        const card = e.currentTarget;
+        const rect = card.getBoundingClientRect();
+        const x = e.clientX - rect.left;
+        const y = e.clientY - rect.top;
+        card.style.setProperty("--mouse-x", `${x}px`);
+        card.style.setProperty("--mouse-y", `${y}px`);
+    };
+
     return (
         <section ref={sectionRef} className="py-24 px-6 md:px-12 lg:px-24 bg-[#050505] text-white w-full relative z-30">
             <div className="text-center mb-16 md:mb-24 qual-header">
@@ -78,7 +87,8 @@ export default function Qualifications() {
                 {qualifications.map((item) => (
                     <div
                         key={item.id}
-                        className="interactable bg-[#111111] p-8 rounded-2xl border border-gray-800 hover:border-gray-500 transition-colors duration-500 group relative overflow-hidden"
+                        onMouseMove={handleMouseMove}
+                        className="interactable spotlight-card bg-[#111111] p-8 rounded-2xl border border-gray-800 hover:border-gray-500 transition-colors duration-500 group relative overflow-hidden"
                     >
                         {/* Subtle gradient glow effect on hover */}
                         <div className="absolute inset-0 bg-gradient-to-br from-white/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"></div>

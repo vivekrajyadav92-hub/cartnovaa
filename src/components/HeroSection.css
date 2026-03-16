@@ -53,12 +53,16 @@ canvas {
 }
 
 .text-container h2 {
-    font-size: 4rem;
-    font-weight: 500;
-    margin-bottom: 0.5rem;
-    line-height: 1.1;
-    color: #ffffff;
-    letter-spacing: 0.02em;
+    font-size: 5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    line-height: 1;
+    color: transparent;
+    background: linear-gradient(135deg, #fff 0%, #a5a5a5 50%, #fff 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    letter-spacing: -0.04em;
+    font-family: 'Great Vibes', cursive;
 }
 
 .text-container p {
@@ -118,13 +122,18 @@ canvas {
 }
 
 .scroll-text {
-    font-size: 0.875rem;
-    font-weight: 500;
+    font-size: 0.75rem;
+    font-weight: 600;
     text-transform: uppercase;
-    letter-spacing: 0.1em;
-    color: rgba(255, 255, 255, 0.7);
+    letter-spacing: 0.3em;
+    color: rgba(255, 255, 255, 0.4);
     text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
     white-space: nowrap;
+    transition: color 0.3s ease;
+}
+
+.scroll-indicator:hover .scroll-text {
+    color: rgba(255, 255, 255, 1);
 }
 
 .scroll-mouse {

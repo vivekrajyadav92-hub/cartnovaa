@@ -178,9 +178,16 @@ export default function HeroSection() {
                 trigger: seq.sectionId,
                 start: "top 60%",
                 end: "bottom 60%",
-                onEnter: () => gsap.to(`#text-${index + 1}`, { opacity: 1, duration: 1, ease: "power2.out" }),
+                onEnter: () => {
+                    gsap.to(`#text-${index + 1}`, { opacity: 1, duration: 1, ease: "power2.out" });
+                    gsap.fromTo(`#text-${index + 1} h2`, { y: 20, opacity: 0 }, { y: 0, opacity: 1, duration: 1, delay: 0.2, ease: "power3.out" });
+                    gsap.fromTo(`#text-${index + 1} p`, { y: 20, opacity: 0 }, { y: 0, opacity: 1, duration: 1, delay: 0.4, ease: "power3.out" });
+                },
                 onLeave: () => gsap.to(`#text-${index + 1}`, { opacity: 0, duration: 1, ease: "power2.out" }),
-                onEnterBack: () => gsap.to(`#text-${index + 1}`, { opacity: 1, duration: 1, ease: "power2.out" }),
+                onEnterBack: () => {
+                    gsap.to(`#text-${index + 1}`, { opacity: 1, duration: 1, ease: "power2.out" });
+                    gsap.to(`#text-${index + 1} h2, #text-${index + 1} p`, { y: 0, opacity: 1, duration: 0.5, ease: "power3.out" });
+                },
                 onLeaveBack: () => {
                     if (index !== 0) gsap.to(`#text-${index + 1}`, { opacity: 0, duration: 1, ease: "power2.out" });
                 },
