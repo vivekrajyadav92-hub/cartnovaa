@@ -222,7 +222,7 @@ export default function HeroSection() {
 
             <div className="fixed-text-container">
                 <div className="text-container fixed-text" id="text-1">
-                    <h2>Hello!, I am Pratyush Kumar</h2>
+                    <h2>Hello! I am Pratyush Kumar</h2>
                     <p>Web Developer &amp; Digital Growth Consultant — Founder OF Cartnova.</p>
                 </div>
                 <div className="text-container fixed-text" id="text-2">
