@@ -50,7 +50,6 @@ export default function Footer() {
             <div className="flex flex-col md:flex-row justify-between items-center pt-8 border-t border-gray-800/50">
                 <div className="flex gap-8 mb-6 md:mb-0">
                     <a href="https://www.instagram.com/cartnova.co" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition-colors interactable text-sm font-semibold uppercase tracking-wider">Instagram</a>
-                    <a href="https://github.com/vivekrajyadav92-hub" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition-colors interactable text-sm font-semibold uppercase tracking-wider">GitHub</a>
                 </div>
 
                 <div className="flex items-center gap-8">
