@@ -95,7 +95,7 @@ export default function Experiences() {
                             className={`flex flex-col md:flex-row gap-4 md:gap-12 py-10 interactable group cursor-pointer ${index !== experiences.length - 1 ? 'border-b border-gray-800' : ''}`}
                         >
                             <div className="md:w-1/4 pt-1">
-                                <span className="text-gray-500 font-serif italic text-lg">{exp.period}</span>
+                                <span className="text-gray-500 font-serif italic text-xl" style={{ fontFamily: "'Instrument Serif', serif" }}>{exp.period}</span>
                             </div>
                             <div className="md:w-3/4">
                                 <h3 className="text-3xl font-bold mb-2 group-hover:text-gray-300 transition-colors">{exp.role}</h3>

@@ -63,11 +63,13 @@ canvas {
 }
 
 .text-container p {
-    font-size: 1.25rem;
-    font-weight: 400;
+    font-size: 1.15rem;
+    font-weight: 500;
     line-height: 1.6;
     color: rgba(255, 255, 255, 0.8);
     text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
+    font-family: 'Syne', sans-serif;
+    letter-spacing: 0.02em;
 }
 
 .center-text {

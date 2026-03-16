@@ -146,8 +146,8 @@ export default function FeaturedProjects() {
                         </div>
                         <div className="w-full lg:w-2/5 flex flex-col justify-center">
                             <div className="flex justify-between items-center mb-6 overflow-hidden">
-                                <span className="text-gray-300 tracking-[0.2em] uppercase text-[10px] font-bold transform translate-y-full group-hover:translate-y-0 transition-transform duration-500">{project.category}</span>
-                                <span className="text-gray-400 font-serif italic transform translate-y-full group-hover:translate-y-0 transition-transform duration-500 delay-100">{project.year}</span>
+                                <span className="text-gray-300 tracking-[0.2em] uppercase text-[10px] font-bold transform translate-y-full group-hover:translate-y-0 transition-transform duration-500 font-sans">{project.category}</span>
+                                <span className="text-gray-400 font-serif italic transform translate-y-full group-hover:translate-y-0 transition-transform duration-500 delay-100 text-lg" style={{ fontFamily: "'Instrument Serif', serif" }}>{project.year}</span>
                             </div>
                             <h3 className="text-4xl md:text-5xl font-bold mb-6 group-hover:text-gray-300 transition-colors tracking-tighter">{project.title}</h3>
                             <div className="flex items-center gap-4">

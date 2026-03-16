@@ -97,7 +97,7 @@ export default function Qualifications() {
                             {item.icon}
                         </div>
                         <h3 className="text-2xl font-bold mb-2">{item.title}</h3>
-                        <div className="flex justify-between items-center mb-4 text-sm font-serif italic">
+                        <div className="flex justify-between items-center mb-4 text-base font-serif italic" style={{ fontFamily: "'Instrument Serif', serif" }}>
                             <span className="text-gray-400">{item.institution}</span>
                             <span className="text-gray-500">{item.year}</span>
                         </div>
