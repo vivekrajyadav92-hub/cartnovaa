@@ -120,13 +120,13 @@ canvas {
 
 .scroll-text {
     font-size: 0.75rem;
-    font-weight: 600;
+    font-weight: 700;
     text-transform: uppercase;
-    letter-spacing: 0.3em;
-    color: rgba(255, 255, 255, 0.4);
-    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    letter-spacing: 0.35em;
+    color: rgba(255, 255, 255, 0.85);
+    text-shadow: 0 4px 10px rgba(0, 0, 0, 0.9);
     white-space: nowrap;
-    transition: color 0.3s ease;
+    transition: all 0.3s ease;
 }
 
 .scroll-indicator:hover .scroll-text {
@@ -136,9 +136,10 @@ canvas {
 .scroll-mouse {
     width: 26px;
     height: 42px;
-    border: 2px solid rgba(255, 255, 255, 0.5);
+    border: 2px solid rgba(255, 255, 255, 0.8);
     border-radius: 13px;
     position: relative;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
 }
 
 .scroll-wheel {
