@@ -7,6 +7,8 @@ import Experiences from './components/Experiences';
 import Testimonials from './components/Testimonials';
 import Footer from './components/Footer';
 
+import { SpeedInsights } from "@vercel/speed-insights/react";
+
 function App() {
   return (
     <div className="bg-black text-white selection:bg-white selection:text-black">
@@ -18,6 +20,7 @@ function App() {
       <Experiences />
       <Testimonials />
       <Footer />
+      <SpeedInsights />
     </div>
   );
 }
